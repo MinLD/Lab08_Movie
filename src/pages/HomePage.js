@@ -1,23 +1,33 @@
 import { Link } from "react-router-dom";
-import "./Pages.css";
+import movies from "../data/movies";
+import "./HomePage.css";
 
 function HomePage() {
   return (
-    <section className="page-section hero-section">
+    <section className="home-page">
       <div className="container">
-        <span className="eyebrow">React Movie Website</span>
-        <h1>Khám phá những bộ phim đáng xem</h1>
-        <p className="page-lead">
-          Đây là nội dung tạm để kiểm tra Header, Footer, layout và React Router.
-          Thành viên phụ trách HomePage sẽ thay thế phần này bằng danh sách phim.
-        </p>
-        <div className="page-actions">
-          <Link className="button button--primary" to="/movies/1">
-            Xem trang chi tiết mẫu
-          </Link>
-          <Link className="button button--secondary" to="/about">
-            Giới thiệu nhóm
-          </Link>
+        <div className="home-heading">
+          <span>PHIM ĐỀ XUẤT</span>
+          <h1>Danh sách phim</h1>
+        </div>
+
+        <div className="movie-grid">
+          {movies.map((movie) => (
+            <article className="movie-card" key={movie.id}>
+              <img src={movie.image} alt={movie.title} />
+
+              <div className="movie-card-content">
+                <h2>{movie.title}</h2>
+                <p>
+                  {movie.year} · {movie.genre}
+                </p>
+
+                <Link to={`/movies/${movie.id}`} className="detail-link">
+                  Xem chi tiết
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
