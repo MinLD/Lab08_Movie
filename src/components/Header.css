@@ -1,13 +1,12 @@
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(17, 24, 39, 0.92);
-  backdrop-filter: blur(12px);
+  z-index: 100;
+  background: #111827;
+  border-bottom: 1px solid #374151;
 }
 
-.site-header__inner {
+.header-inner {
   min-height: 68px;
   display: flex;
   align-items: center;
@@ -15,59 +14,45 @@
   gap: 24px;
 }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+.logo {
   color: #ffffff;
-  text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 24px;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
-.brand__mark {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: #ef4444;
-  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.28);
-}
-
-.main-nav {
+.navigation {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.main-nav__link {
-  border-radius: 9px;
-  padding: 9px 13px;
-  color: #cbd5e1;
-  text-decoration: none;
+.nav-link {
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #d1d5db;
   font-weight: 600;
-  transition: background-color 160ms ease, color 160ms ease;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
-.main-nav__link:hover,
-.main-nav__link--active {
-  background: rgba(255, 255, 255, 0.1);
+.nav-link:hover,
+.nav-link.active {
   color: #ffffff;
+  background: #ef4444;
 }
 
-@media (max-width: 560px) {
-  .site-header__inner {
-    min-height: 62px;
+@media (max-width: 600px) {
+  .header-inner {
+    min-height: 60px;
   }
 
-  .brand__text {
-    display: none;
+  .logo {
+    font-size: 20px;
   }
 
-  .main-nav__link {
+  .nav-link {
     padding: 8px 10px;
-    font-size: 0.92rem;
+    font-size: 14px;
   }
 }
