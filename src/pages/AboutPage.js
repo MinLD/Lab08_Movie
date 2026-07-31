@@ -2,10 +2,10 @@ import "./Pages.css";
 import "./AboutPage.css";
 
 const team = [
-  { name: "Nguyen Van A", role: "Truong nhom", branch: "feature/header-footer" },
-  { name: "Tran Thi B", role: "Thanh vien", branch: "feature/home-page" },
-  { name: "Le Van C", role: "Thanh vien", branch: "feature/about-page" },
-  { name: "Pham Thi D", role: "Thanh vien", branch: "feature/movie-detail" },
+  { name: "Do Dang Minh Luan", role: "Truong nhom", branch: "feature/header-footer" },
+  { name: "Nguyen Huu Tan", role: "Thanh vien", branch: "feature/home-page" },
+  { name: "Huynh Tan Len", role: "Thanh vien", branch: "feature/about-page" },
+  { name: "Nguyen Dinh Bao Tram", role: "Thanh vien", branch: "feature/movie-detail" },
 ];
 
 const techStack = ["React", "React Router", "Git Flow", "GitHub Pull Request"];
