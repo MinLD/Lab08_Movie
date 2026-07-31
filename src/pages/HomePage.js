@@ -18,6 +18,7 @@ function HomePage() {
           <Link className="button button--secondary" to="/about">
             Giới thiệu nhóm
           </Link>
+          <div>dont touch</div>
         </div>
       </div>
     </section>
